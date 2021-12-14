@@ -197,7 +197,7 @@
 	4.1.1 - (2021-03-17) - Fixed issue with driver package detection logic where null value could cause a matched entry
 	4.1.2 - (2021-05-14) - Fixed bug for Driver Update process on 20H2
 	4.1.3 - (2021-05-28) - Added support for Windows 10 21H1
-	4.1.4 - (2021-12-03) - Added support for Windows 10 21H2
+	4.1.3.5 - (2021-12-03) - Added support for Windows 10 21H2
 #>
 [CmdletBinding(SupportsShouldProcess = $true, DefaultParameterSetName = "BareMetal")]
 param(
