@@ -107,9 +107,9 @@
 	Author:      Nickolaj Andersen / Maurice Daly
     Contact:     @NickolajA / @MoDaly_IT
     Created:     2017-03-27
-    Updated:     2021-03-18
+    Updated:     2022-01-24
 	
-	Contributors: @CodyMathis123, @JamesMcwatty
+	Contributors: @CodyMathis123, @JamesMcwatty, @JoeBembry
     
     Version history:
     1.0.0 - (2017-03-27) - Script created
@@ -198,6 +198,7 @@
 	4.1.2 - (2021-05-14) - Fixed bug for Driver Update process on 20H2
 	4.1.3 - (2021-05-28) - Added support for Windows 10 21H1
 	4.1.3.5 - (2021-12-03) - Added support for Windows 10 21H2
+	4.1.4 - (2022-01-24) - Updated with support Windows 11
 #>
 [CmdletBinding(SupportsShouldProcess = $true, DefaultParameterSetName = "BareMetal")]
 param(
@@ -964,6 +965,9 @@ Process {
 			[string]$InputObject
 		)
 		switch (([System.Version]$InputObject).Build) {
+			"22000" {
+				$OSVersion = '21H2' #Windows 11
+			}
 			"19044" {
 				$OSVersion = '21H2'
 			}
